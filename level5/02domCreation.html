@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating DOM with Lord Hitesh</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <div class="parent">
+        <!-- this is a comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector(".parent") //selects a defined query (class or id)
+    console.log(parent);
+    console.log(parent.children); //returns every description about the defined query (here -> parent)
+    console.log(parent.children[1]); //returns description of second element from array
+    console.log(parent.children[1].innerHTML); //returns only inner subject
+
+    for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerHTML); //returns whole class/id.
+    }
+    parent.children[1].style.color = "orange" //helps in designing any choosed element
+    console.log(parent.firstElementChild); //as per name returns first element i.e. [0]
+    console.log(parent.lastElementChild); //as per name returns last element i.e. [n]
+    
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne); //display as per querySelector, here class(day)
+    console.log(dayOne.parentElement); //displays every bit of information regarding whole element
+    console.log(dayOne.nextElementSibling); //displays their next sibling
+
+    console.log("NODES: ", parent.childNodes); //returns nodelist, it is a collection of document nodes which includes text nodes, attribute nodes and element nodes. A line break is also counted on nodelist but only first one. All subsequent line breaks are further ignored by browser.
+    
+    
+</script>
+</html>

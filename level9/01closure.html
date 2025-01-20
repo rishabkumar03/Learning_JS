@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure in javascript</title>
+</head>
+<body style="background-color: black">
+    <button id="bhagwa">BHAGWA</button>
+    <button id="neela">NEELA</button>
+</body>
+    <script>
+        /* USECASE OF INIT() FOR ACCESSING INNER DATA WHILE PRESENTED IN OUTER AREA */
+
+        // function init() {
+        //     let name = "Mozilla"; 
+        //     function displayName() {
+        //         console.log(name); 
+        //     }
+        //     displayName(); 
+        // } 
+        // init();
+
+
+        /* THESE FUNCTIONS REPRESENT a typically indian family WHERE : 
+                CHILDREN CAN ACCESS ANYTHING FROM PARENTS AND SUB-PARENTS
+                PARENTS CANT ACCESS ANYTHING FROM CHILDREN AND SUB-CHILDREN
+                TWO BROTHERS (here functions) CAN ACCESS ANYTHING FROM PARENTS AND CANT ACCESS ANYTHING FROM CHILDREN AS WELL AS THEY BOTH CANT SHARE ANYTHING FROM EACH OTHER
+        */
+       
+        // function outer(){
+        //     let username = "rishab"
+        //     console.log("OUTER", secret);
+            
+        //     function inner(){
+        //         let secret = "bhanuIsGay"
+        //         console.log("inner", username);
+                
+        //     }
+        //     function innerTwo(){
+        //         console.log("innerTwo", username);
+        //         console.log(secret);
+                
+        //     }
+        //     inner()
+        //     innerTwo()
+        // }
+        // outer()
+        // console.log("TOO OUTER", username);
+        
+
+        /* HERE, DISPLAYNAME() IS THE BADDIE/MAIN CHARACTER CAUSE IT WILL INHERIT/ACCESS THEIR OWN LOCAL SCOPE BUT ALSO ACCESS FURTHER CALL STATEMENT, here myFunc()
+        
+        IT CLEARIFIES LEXICAL SCOPING IN MUCH EFFICIENT WAY
+        */
+
+        // function makeFunc() {
+        //     const name = "Mozilla";
+        //     function displayName() {
+        //         console.log(name);
+        //     }
+        //     return displayName;
+        // }
+
+        // const myFunc = makeFunc();
+        // myFunc();
+
+    </script>
+
+    <script>
+        /* THESE CODES DISPLAYS THE BASIC FUNCTIONALITY AND IT WILL COLLAPSE WHEN WE HAVE MUCH REQUIRED TASK AND WE HAVE TO PERFORM IT WITHOUT ANY REPETITION */
+        document.getElementById("bhagwa").onclick = function(){
+            document.body.style.backgroundColor = `orange`
+        }
+        document.getElementById("neela").onclick = function(){
+            document.body.style.backgroundColor = `blue`
+        }
+
+
+        /* IT IS THE MOST PRACTICAL USE OF CLOSURES AND LEXICAL SCOPING */
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}`
+
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.getElementById('bhagwa').onclick = clickHandler("orange")
+        document.getElementById('neela').onclick = clickHandler("blue")
+    </script>
+</html>

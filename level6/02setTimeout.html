@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>OO Billo Rani</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const powerUp = function(){
+        console.log("Gear V");    
+    }
+
+    const improveH1 = function(){
+        document.querySelector('h1').innerHTML = "Binks Brew"
+    }
+
+    const changeIt = setTimeout(powerUp, 2000) //generally it is used to return data after a certain interval of time (in ms). here, 2 sec
+    
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeIt) 
+        console.log("STOPPED "); //repetition occurs after 2 sec 
+        
+    })
+    
+</script>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML EVENTS</title>
+</head>
+<body style="background-color: gray; color: aliceblue;">
+    <h2>Amazing Pictures</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" alt="photoshop" id="photoshop" src="https://cdn.pixabay.com/photo/2020/04/23/12/44/lighthouse-5082316_1280.jpg"></li>
+            <li><img width="200px" alt="" id="japan" src="https://cdn.pixabay.com/photo/2022/08/15/05/23/sun-rays-7387131_1280.jpg"></li>
+            <li><img width="200px" alt="" id="river" src="https://cdn.pixabay.com/photo/2023/09/25/10/46/water-8274680_1280.jpg"></li>
+            <li><img width="200px" alt="" id="owl" src="https://cdn.pixabay.com/photo/2016/11/18/12/14/owl-1834152_1280.jpg" onclick="alert('owl')"></li>
+            <li><img width="200px" alt="" id="prayer" src="https://cdn.pixabay.com/photo/2017/07/27/11/16/prayer-2544994_1280.jpg"></li>
+            <li><a  style="color: aliceblue;" href="https://www.google.com" id="google">GOOGLE</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert('owl clicked')
+    // }
+
+    // attachEvent
+    // jQuery - on
+
+    /** 
+    type - it returns the type of event, 
+    timestamp - it returns the time (in milliseconds) at which the event is created, 
+    defaultPrevented - it is a boolean property that whether the event's default behaviour has been prevented
+    target - it returns a reference to the element that trigerred the event, 
+    toElement - it is used during a mouseover or mouseout event and refers to the element, the pointer is moving to, 
+    srcElement - similar to target, it returns the element that initiated the event, 
+    currentTarget - it returns the element that is currently handling the event,
+    clientX, clientY - clientX (horizontal) & clientY (vertical) returns respective coordinates of the mouse pointer relative to the visible part of the web page (viewport), 
+    screenX, screenY - screenX (horizontal) & screenY (vertical) returns respective coordinates of the mouse pointer relative to the user's screen,
+    altkey, ctrlkey, shiftkey - this boolean properties indicates whether the Alt, Ctrl, or Shift key is pressed during the event.
+    keyCode - it returns the numeric code of the key pressed
+    **/
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false)
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clickgoogle').addEventListener('click', function(e){
+    //     e.preventDefault();ed");
+    //     e.stopPropagation()
+    // }, false)
+
+    // document.getElementById('
+    //     e.stopPropagation();
+    //     console.log("google clicked");
+    // }, false)
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()   
+        }
+        // removeIt.parentNode.removeChild(removeIt)
+    })
+</script>
+</html>

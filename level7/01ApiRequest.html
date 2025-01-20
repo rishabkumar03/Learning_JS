@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: aliceblue;"> 
+    Value	State	Description
+0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+</body>
+<script>
+    const requestURL = 'https://api.github.com/users/hiteshchoudhary' //getting API
+    const XHR = new XMLHttpRequest();
+    XHR.open('GET', requestURL)
+    XHR.onreadystatechange = function(){ //readyState is a property, holds the status of XMLHttpRequest.
+        console.log(XHR.readyState);
+        if (XHR.readyState === 4) {
+            const info = JSON.parse(this.responseText) //this keyword refers object and responseText returns the text recieved from server following a request.
+            console.log(typeof info); //object
+            
+            console.log(info);
+            
+        }
+    }
+//  SIR KA ASSSIGNMENT - Make a card where photo and general info shown. -->> name, bio, avatar_url    
+    XHR.send()
+</script>
+</html>

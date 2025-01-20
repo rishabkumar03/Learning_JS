@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HITESH SIR :D</title> 
+</head>
+<body style="background-color: black;">
+<h1>Get Familiar With This Cool Teacher.</h1>
+<div class="boxx">
+    <p class="card">...</p>
+</div>
+    <style class="css">
+        h1 {
+            color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: antiquewhite;
+            font-size: 1.2em;
+        }
+
+        .boxx {
+            margin: auto;
+            border: 0.5px solid aliceblue;
+            padding: 70px;
+            border-radius: 105px;
+        }
+    </style>
+    
+    <script>
+        const requestURL = 'https://api.github.com/users/hiteshchoudhary'
+        const XHR = new XMLHttpRequest();
+        XHR.open('GET', requestURL);
+
+        XHR.onreadystatechange = function(e){ 
+            console.log(XHR.readyState);
+            if (XHR.readyState === 4) {
+                const info = JSON.parse(this.responseText) 
+                console.log(info.avatar_url);
+                console.log(info.name);
+                console.log(info.bio);
+                
+                const ret = document.getElementsByClassName('card')[0];
+        
+                ret.innerHTML = ` 
+                <img src="${info.avatar_url}" alt="{info.name}" width="100"> 
+                <h2>${info.name}</h2> 
+                <p>${info.bio}</p> 
+                `;
+            }
+        } 
+
+        XHR.send();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn with Lord</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="lang">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+
+    // ADD
+
+    function addLang(langName) {
+        const myLi = document.createElement('li')
+        myLi.innerHTML = `${langName}`
+        document.querySelector('.lang').appendChild(myLi)
+    }
+    addLang("C")
+    addLang("C++")
+
+    function addOptiLang(langName){
+        const myLi = document.createElement('li')
+        myLi.appendChild(document.createTextNode(langName))
+        document.querySelector('.lang').appendChild(myLi)
+    }
+    addOptiLang("HTML")
+
+    // EDIT 
+
+    const secondlang = document.querySelector("li:nth-child(2)")
+    console.log(secondlang);
+    
+    secondlang.innerHTML = "CSS"
+    const newLi = document.createElement('li')
+    newLi.textContent = "Python"
+    secondlang.replaceWith(newLi)
+
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>VS CODE</li>'
+
+    //REMOVE
+
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>

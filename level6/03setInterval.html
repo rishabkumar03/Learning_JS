@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>RYOU</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const returnDate = function(str){
+        console.log(str, Date.now()); //returns date
+    }
+    
+    let Interval; //declaring variable for representing in global scope and further using it in local scope.
+
+    document.querySelector('#start').addEventListener('click', function(){
+        Interval = setInterval(returnDate, 1000, "hemmlooo") //starts returning after clicking into "START" button.
+        console.log("Start Button is working"); 
+    });
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(Interval) //stops returning after clicking into "STOP" button.
+        console.log("Stop Button is working");
+        
+    })
+</script>
+</html>
