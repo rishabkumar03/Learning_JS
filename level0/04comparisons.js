@@ -1,9 +1,17 @@
-// console.log("3" > 4);
+console.log("3" > 4);
+/* When comparing a string to a number, JavaScript tries to convert the string into a number first (type coercion). */
+
 // console.log("04" > 4);
 
 console.log(null > 0);
 console.log(null == 0);
 console.log(null >= 0);
+/* 
+
+- The >= operator converts both sides to numbers before comparing. 
+- null → converted to 0 (number).
+
+*/
 
 /* COMPARISONS OF DATATYPES
 
