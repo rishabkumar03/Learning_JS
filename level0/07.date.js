@@ -9,15 +9,15 @@ console.log(myDate.toDateString()); //returns day(in words) & date
 
 console.log(typeof myDate); //object type
 
-let myCretedDate = new Date(2025, 1, 3)
-console.log(myCretedDate.toDateString()); //returns value as (day) feb 03 2025
+let myCreatedDate = new Date(2025, 1, 3)
+console.log(myCreatedDate.toDateString()); //returns value as (day) feb 03 2025
 
 // let myCretedDate = new Date("2-3-2190")
-console.log(myCretedDate.toLocaleString()); //returns value as 2/3/2190 12:00:00 AM 
+console.log(myCreatedDate.toLocaleString()); //returns value as 2/3/2190 12:00:00 AM 
 
 let myTime = Date.now()
 console.log(myTime); //returns time as miliseconds in unorganized way
-console.log(myCretedDate.getTime()); //returns time from defined date-month-year
+console.log(myCreatedDate.getTime()); //returns time from defined date-month-year
 
 console.log(Math.floor(Date.now()/1000)); //returns time in seconds
 

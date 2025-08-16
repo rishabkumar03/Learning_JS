@@ -10,6 +10,9 @@ console.log(availBalance.toFixed(5)); //toFixed -> shows desired number of digit
 
 const savings = 34.436667
 console.log(savings.toPrecision(1)); //returns a string rounded in desired digits. if desired isnt accurate, it mess the number like here 3e+436
+console.log(savings.toPrecision(2));
+console.log(savings.toPrecision(3));
+console.log(savings.toPrecision(8));
 
 const deposit = 13576
 console.log(deposit.toLocaleString('en-IN')); //returns in indian system means ones-tens-hundreds-......
@@ -34,3 +37,12 @@ const min = 23 //maximum value
 const max = 67 //minimum value
 
 console.log(Math.floor(Math.random() * (max - min + 1)) + min); //it is the general formula for getting random value as per limit
+
+/* 
+
+- Math.random -> gives 0 <= n < 1
+- Multiply by (max - min + 1) -> now the range is 0 <= n < (max - min + 1)
+- Math.floor(...) -> converts it into an integer between 0 and (max - min)
+- + min -> shifts the range between min to max 
+
+*/
