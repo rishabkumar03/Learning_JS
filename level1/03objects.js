@@ -36,3 +36,5 @@ JsUser.greetingAgain = function(){
 console.log(JsUser.greeting());
 
 console.log(JsUser.greetingAgain());
+
+// Due to Object.freeze(JsUser), the JsUser.greeting and JsUser.greetingAgain function will fail. 

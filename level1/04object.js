@@ -41,7 +41,9 @@ const names = [
     }
 ]
 
-names[1].name1
+test = names[1].name1
+console.log(test);
+
 console.log(user);
 
 console.log(Object.keys(user)); //displays only keys
@@ -60,6 +62,7 @@ const chips = {
 chips.chipsBrand
 
 const {chipsBrand: brand} = chips //we can use any short name in place of any contents
-console.log(chipsBrand);
+
+console.log(chipsBrand); //this code will fall silently beacause in the above line:64, we did destructuring in renaming chipsBrand to brand and now the chipsBrand doesn't exist (only brand exist).
 
 console.log(brand);

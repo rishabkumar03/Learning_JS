@@ -26,3 +26,21 @@ let second = 45
 let third = 32
 
 console.log(Array.of(first, second, third)); 
+
+/* 
+
+DIFFERENCE BETWEEN ARRAY() AND ARRAY.OF()
+
+ARRAY()
+    - It is the array constructor.
+    - Behaviour depends on the number of arguements.
+    - EXAMPLE : console.log(Array(3)) -> returns [<3 empty items>].
+                console.log(Array(1, 2, 3)) -> returns [1, 2, 3].
+
+ARRAY.OF()
+    - Always creates an array from its arguements.
+    - No special case for single numbers.
+    - EXAMPLE : console.log(Array.of(3)) -> returns [3].
+                console.log(Array.of(1, 2, 3)) -> returns [1, 2, 3].
+
+*/

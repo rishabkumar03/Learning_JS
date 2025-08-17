@@ -35,4 +35,17 @@ const myNewB = myArr.splice(1, 3) //mutates original array itself by removing, r
 console.log("C ", myArr);
 console.log(myNewB);
 
+/* 
 
+DIFFERENCE BETWEEN SLICE AND SPLICE:
+
+SLICE:
+    - Doesn't change the original array (non-destructive).
+    - SYNTAX: array.slice(start, end)
+
+SPLICE: 
+    - Changes the original array (destructive).
+    - Can add, remove or replace elements.
+    - SYNTAX: array.splice(start, deleteCount, item1, item2, ...)
+    
+*/
