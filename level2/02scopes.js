@@ -52,3 +52,9 @@ const plusTwo = function (num) {
     return num + 2
 }
 
+/* 
+
+- Hoisting means before executing the code, JS Engine moves the decalrations (not the values) of the varibles and functions to the top of their scopes.
+- These declaration works properly in functions and var variable while it shows REFERENCE ERROR in let/const varible because these variables lies in TDZ (Temporal Dead Zone) until the actual line of code is reached. 
+
+*/

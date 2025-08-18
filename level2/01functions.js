@@ -21,6 +21,8 @@ function addTwoNums(num1, num2){
     return num1 + num2  //generates output  
 }
 
+// I defined addTwoNums twice, due to which the first function is overwritten by second function.
+
 const sum = addTwoNums(35, 35) //extract input in function from here
 
 console.log("sum: ", sum);
