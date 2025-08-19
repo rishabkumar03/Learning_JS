@@ -24,7 +24,6 @@ map.set('WB', "West Bengal")
 map.set('BR', "Bihar")
 map.set('JH', "Jharkhand")
 
-for (const key in map) {
-    console.log(key);
-    
+for (const key in map) { //for in loop is meant for object not for maps, which is iterable and suitable for for of loop.
+    console.log(key); 
 }

@@ -3,8 +3,8 @@
 const frameworks = ["react", "node", "next"]
 
 const values = frameworks.forEach( (item) => {
-    console.log(item);
-    return item
+    console.log(item); 
+    return item // FOR EACH completely ignores return values and always returns undefined like this case.
 })
 
 console.log(values);
@@ -13,7 +13,7 @@ console.log(values);
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 // const newNums = myNums.filter( (num) => {
-    // return num > 4
+//     return num > 4
 // })
 
 const newNums = []

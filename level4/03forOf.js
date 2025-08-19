@@ -38,5 +38,4 @@ const mine = {
 
 // for (const [key, value] of mine) {
 //     console.log(key, ':-', value);
-    
 // }

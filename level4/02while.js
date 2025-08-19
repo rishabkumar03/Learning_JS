@@ -13,7 +13,7 @@ while (view < motivationalMovies.length) {
 }
 
 let pushUps = 51
-do { //do while loops are [exit controlled loops]
+do { //do while loops are [exit controlled loops] i.e. it always run once even if the condition is false.
     console.log(`pushup is ${pushUps}`);
     pushUps ++
 } while (pushUps <= 50); //here, it only logs out "pushup is 51"
