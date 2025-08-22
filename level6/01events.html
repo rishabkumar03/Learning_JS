@@ -19,41 +19,21 @@
     </div>
 </body>
 <script>
-    // document.getElementById('owl').onclick = function(){
-    //     alert('owl clicked')
-    // }
+    document.getElementById('owl').onclick = function(){
+        alert('owl clicked')
+    }
 
     // attachEvent
     // jQuery - on
 
-    /** 
-    type - it returns the type of event, 
-    timestamp - it returns the time (in milliseconds) at which the event is created, 
-    defaultPrevented - it is a boolean property that whether the event's default behaviour has been prevented
-    target - it returns a reference to the element that trigerred the event, 
-    toElement - it is used during a mouseover or mouseout event and refers to the element, the pointer is moving to, 
-    srcElement - similar to target, it returns the element that initiated the event, 
-    currentTarget - it returns the element that is currently handling the event,
-    clientX, clientY - clientX (horizontal) & clientY (vertical) returns respective coordinates of the mouse pointer relative to the visible part of the web page (viewport), 
-    screenX, screenY - screenX (horizontal) & screenY (vertical) returns respective coordinates of the mouse pointer relative to the user's screen,
-    altkey, ctrlkey, shiftkey - this boolean properties indicates whether the Alt, Ctrl, or Shift key is pressed during the event.
-    keyCode - it returns the numeric code of the key pressed
-    **/
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+    }, false)
 
-    // document.getElementById('images').addEventListener('click', function(e){
-    //     console.log("clicked inside the ul");
-    // }, false)
-
-    // document.getElementById('owl').addEventListener('click', function(e){
-    //     console.log("owl clickgoogle').addEventListener('click', function(e){
-    //     e.preventDefault();ed");
-    //     e.stopPropagation()
-    // }, false)
-
-    // document.getElementById('
-    //     e.stopPropagation();
-    //     console.log("google clicked");
-    // }, false)
+    document.getElementById('owl').addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation() // means "Don't let this click trigger any parent's element event listeners." or we can say it will stops bubbling.
+    }, false)
 
     document.querySelector('#images').addEventListener('click', function(e){
         console.log(e.target.tagName);

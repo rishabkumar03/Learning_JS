@@ -1,0 +1,11 @@
+- **type** - it returns the type of event, 
+- **timestamp** - it returns the time (in milliseconds) at which the event is created, 
+- **defaultPrevented** - it is a boolean property that whether the event's default behaviour has been prevented
+- **target** - it returns a reference to the element that trigerred the event, 
+- **toElement** - it is used during a mouseover or mouseout event and refers to the element, the pointer is moving to, 
+- **srcElement** - similar to target, it returns the element that initiated the event, 
+- **currentTarget** - it returns the element that is currently handling the event,
+- **clientX, clientY** - clientX (horizontal) & clientY (vertical) returns respective coordinates of the mouse pointer relative to the visible part of the web page (viewport), 
+- **screenX, screenY** - screenX (horizontal) & screenY (vertical) returns respective coordinates of the mouse pointer relative to the user's screen,
+- **altkey, ctrlkey, shiftkey** - this boolean properties indicates whether the Alt, Ctrl, or Shift key is pressed during the event.
+- **keyCode** - it returns the numeric code of the key pressed
