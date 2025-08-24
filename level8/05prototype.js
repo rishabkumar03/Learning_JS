@@ -25,7 +25,16 @@ Array.prototype.hiRishab = function(){ //variable declaration as well as linkage
 movieGenre.rishab() //returns from object.prototype
 myMovies.rishab() //returns from same object.prototype
 myMovies.hiRishab() //returns from array.prototype
-// movieGenre.hiRishab()
+// movieGenre.hiRishab() //fails silently
+
+/* 
+
+DIFFERENCE BETWEEN : Object.prototype.rishab and Array.prototype.hiRishab
+
+- Object.prototype.rishab : all objects (including arrays) inherit this method.
+- Array.prototype.hiRishab : only arrays and its subclasses inherit this method.
+
+*/
 
 // INHERITANCE
 // It is used for linkage of certain/selected key & values from one another.  
@@ -63,5 +72,5 @@ String.prototype.truelength = function(){ //this function holds the creation of 
 }
 
 anotherUsername.truelength() //returns length of acceseed string.
-// "rishab".trueLength()
-// "Machlii".trueLength()
+"rishab".truelength()
+"Machlii".truelength()

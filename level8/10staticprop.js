@@ -13,7 +13,7 @@ class user {
 }
 
 const me = new user("rishab")
-// console.log(me.createId())
+console.log(me.createId())
 
 class Teacher extends user {
     constructor(username, email){

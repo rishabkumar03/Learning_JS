@@ -1,4 +1,4 @@
-//definePrperty is a method which defines a newe property directly on an object.
+//definePrperty is a method which defines a new property directly on an object.
 
 function User(email, password){
     this._email = email;

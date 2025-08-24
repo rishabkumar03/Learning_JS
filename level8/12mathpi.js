@@ -2,6 +2,8 @@ const descriptor = Object.getOwnPropertyDescriptor(Math, "PI") //this property d
 
 console.log(descriptor);
 
+// Math.PI is a built-in constant so that its features like writable, ennumerable, configurable will always returns false unlike true(which is a default property of getOwnPropertyDescriptor)
+
 console.log(Math.PI);
 Math.PI = 5 //Math.PI != 5 beacuse PI is pre-defined constant in ES6 javascript.
 console.log(Math.PI);

@@ -24,7 +24,7 @@ new Promise(function(resolve, reject){
     
 })
 
-// the above 2 are two different types of sybntax implementation
+// the above 2 are two different types of syntax implementation
 
 const promiseThree = new Promise(function(resolve, reject) {
     setTimeout(function(){
@@ -39,7 +39,7 @@ promiseThree.then(function(user){
 
 const promiseFour = new Promise(function(resolve, reject){
     setTimeout(function(){
-        let error = true
+        let error = false
         if (!error) {
             resolve({username: "instagram", password: "Nhii"})
         } else {
@@ -59,7 +59,7 @@ promiseFour.then((user) => {
 
 const promiseFive = new Promise(function(resolve, reject){
     setTimeout(function(){
-        let error = true
+        let error = false
         if (!error) {
             resolve({username: "tera jaana", password: "Wajda"})
         } else {
